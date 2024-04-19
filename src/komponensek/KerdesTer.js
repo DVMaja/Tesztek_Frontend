@@ -7,11 +7,22 @@ export default function KerdesTer() {
   console.log(adatok);
   const kategoriak = useGet("kategoria");
   //console.log(kategoriak);
+  //const tipusok = useGet("tesztek/kategoria/{}")
+
+  /*   function valtas() {
+        let tipusok = useGet("tesztek/kategoria/{2}")
+    } */
 
   if (adatok == null || kategoriak == null) {
+    
     return <div>Kis türelmet az adatok betöltés alatt</div>;
   } else {
+
+    if (kategoriak != null) {
+        
+    }
     return (
+
       <div className="container">
         <div className="d-flex p-2 bd-highlight">
           <Dropdown>
@@ -20,7 +31,7 @@ export default function KerdesTer() {
             </Dropdown.Toggle>
 
             <Dropdown.Menu>
-              {kategoriak.map((kategoriak, index) => {
+              {kategoriak.map((kategoriak, index) => {                
                 return (
                   <Dropdown.Item key={index} href="#/action-1">
                     {kategoriak.kategoriaNev}

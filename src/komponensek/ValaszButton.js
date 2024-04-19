@@ -1,8 +1,9 @@
-export default function ValaszButton(props) {
+import Button from "react-bootstrap/Button";
 
-    return(
-        <Button  className="border border-dark" variant="light">
-            {props.adatok.v1}
-          </Button>
-    )
+export default function ValaszButton(props) {
+  return (
+    <Button className="border border-dark" variant="light">
+      {props.adatok.v1}
+    </Button>
+  );
 }

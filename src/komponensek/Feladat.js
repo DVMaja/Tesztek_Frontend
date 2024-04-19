@@ -1,9 +1,18 @@
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
+import ValaszButton from "./ValaszButton";
 
 function Feladat(props) {
   let helyesValasz = props.adatok.helyes;
-
+    function helyesE(adat) {
+        //console.log(helyesValasz.slice(1,2))
+        let jo = helyesValasz.slice(1,2);
+        //console.log(adat)
+        //console.log("vagyok")
+        //.css("background-color","yellow");
+        
+    }
+    //eventTarget
 
   return (
     <Card className="fluid">
@@ -12,16 +21,18 @@ function Feladat(props) {
           {props.adatok.kerdes}
         </Card.Title>
         <Card.Text>
-          <Button  className="border border-dark" variant="light">
+        
+          <Button onClick={helyesE()} id="1" className="border border-dark" variant="light">
             {props.adatok.v1}
+            
           </Button>
-          <Button className="border border-dark" variant="light">
+          <Button onClick={helyesE()} id="2" className="border border-dark" variant="light">
             {props.adatok.v2}
           </Button>
-          <Button className="border border-dark" variant="light">
+          <Button onClick={helyesE()} id="3" className="border border-dark" variant="light">
             {props.adatok.v3}
           </Button>
-          <Button className="border border-dark" variant="light">
+          <Button onClick={helyesE()} id="4" className="border border-dark" variant="light">
             {props.adatok.v4}
           </Button>
         </Card.Text>
